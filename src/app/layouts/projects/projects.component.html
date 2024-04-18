@@ -1,1 +1,12 @@
-<p>projects works!</p>
+<div class="lg:grid lg:grid-cols-3 gap-4 flex flex-col md:flex-col md:flex">
+	<div *ngFor="let project of projects" class="border-4 border-purple-300 text-[#E7DDFA] sm:w-auto scale-90">
+		<div>
+			<img class="w-[500px] h-[300px] object-contain" src={{project.img}} alt="">
+			<div class="p-3 flex flex-col">
+				<p>Name: string - {{project.name}}</p>
+				<a href={{project.github_front}}>Github frontend: string - <span class="text-pink-600 underline">{{project.github_front}}</span></a>
+				<a href={{project.github_back}}>Github backend: string - <span class="text-pink-600 underline">{{project.github_back}}</span></a>
+			</div>
+		</div>
+	</div>
+</div>
